@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { SET_NAME } from "./reducers/name";
 import { PiLampFill } from "react-icons/pi";
 import { TOGGLE, TURN_OFF, TURN_ON } from "./reducers/lamp";
+import { Counter } from "./counter";
 
 function App() {
   const [clicked, setClicked] = useState(false)
@@ -48,6 +49,10 @@ function App() {
           {sliceLamp && <PiLampFill color="yellow" className="text-[200px] mx-auto"/>}
           {!sliceLamp && <PiLampFill color="white" className="text-[200px] mx-auto"/>}
         </div>
+      </div>
+      <div className="py-[20px]">
+        <h1 className="text-center text-[30px] my-[10px] font-semibold">{`Qo'shimcha`}</h1>
+        <Counter/>
       </div>
     </>
   )
